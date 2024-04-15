@@ -7,6 +7,9 @@ print("a + b : ", a + b)
 print("a + b : ", a + b)
 print("a / b : ", a / b)
 print("a // b : ", a // b)
+<<<<<<< Updated upstream
+print("a % b : ", a % b)
+=======
 print("a % b : ", a % b)
 
 c= 2
@@ -57,3 +60,4 @@ print(f_strr)
 a = "Life is too short"
 
 print(a.upper().lower().replace(" ",",").split(","))
+>>>>>>> Stashed changes
