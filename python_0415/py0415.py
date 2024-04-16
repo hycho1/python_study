@@ -1,4 +1,15 @@
+'''
+a = 3
+if a > 1:
+ print("a는 1보다 큽니다\n")
 
+
+i = 0
+while i < 3:
+ i = i + 1
+
+print(i)
+'''
 '''
 a = 10
 b = 2
@@ -91,7 +102,7 @@ else:
 print(list1)
 '''
 
-'''
+
 data = input('회전수와 문자열을 입력하세요. : ').split()
 rn = int(data.pop(0)) % len(data)
 print(' '.join([
@@ -100,7 +111,7 @@ print(' '.join([
                 ])
     )
 
-'''
+
 
 
 interest = ['삼성','LG','Naver']
@@ -117,3 +128,28 @@ def add(a, b):
 
 print(add(1, 2))
 
+a = 3.123123123123 
+print("%-10.5f" % a)
+
+dict_2 = {'j': 1, 'k':2, 'l':3}
+dict_ = {'a': [1,2,3], 'b': dict_2}
+
+
+print(dict_['a'])
+
+s1 = set("i love u")
+s2 = set("u love me");
+
+s3 = s1 & s2
+
+print(s3)
+
+s4 = s1 |  s2
+
+print(s4)
+
+s5 = s1 - s2
+
+print(s5)
+
+print(True==1)
