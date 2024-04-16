@@ -18,11 +18,10 @@ print("삼각형의 넓이는 " ,int(width*height/2))
 # sub 2) 월급이 100원이다 세금 10%를 제외한 연봉 출력
 
 sales = 100
-year_sales = sales*12
-tax = year_sales*0.1
+year_salary = sales*12
+tax = year_salary*0.1
 
-print(year_sales - tax)
-
+print(year_salary - tax)
 
 # sub 3) 100초를 1분 40초로 출력
 
@@ -49,7 +48,7 @@ QUIZ #4
 3.중복을 제거한 이름을 출력하세요.
 4.중복을 제거한 이름을 오름차순으로 정렬하여 출력하세요.
 '''
-
+'''
 name_string = "이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌"
 
 name_list = name_string.split(",")
@@ -91,3 +90,14 @@ print("3번 답: ", name_set)
 name_list_arrage= list(name_set)
 
 print("4번 답: ", sorted(name_list_arrage))
+'''
+
+
+
+name_string = "이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌"
+name_list = name_string.split(",")
+name = []
+sung = []
+
+for i in name_list:
+    print(i[0])
