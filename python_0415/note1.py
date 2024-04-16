@@ -70,6 +70,7 @@ print(d.split(","))
 #odd.sort()
 #print(odd)
 
+'''
 
 str = "0 똘기 떵이 호치 새초미"
 
@@ -88,4 +89,31 @@ else:
         list1.insert(len(list1)-1 ,list1.pop(0))
 
 print(list1)
+'''
+
+'''
+data = input('회전수와 문자열을 입력하세요. : ').split()
+rn = int(data.pop(0)) % len(data)
+print(' '.join([
+        (data*2)[len(data) + i - rn]
+            for i in range(len(data))
+                ])
+    )
+
+'''
+
+
+interest = ['삼성','LG','Naver']
+
+interest.pop(1)
+print(interest)
+
+
+interest2 = ['삼성','LG', 'Naver', '하이닉스', '대우']
+
+
+def add(a, b):
+    return a+b
+
+print(add(1, 2))
 
