@@ -1,3 +1,5 @@
+
+'''
 a = 10
 b = 2
 
@@ -11,10 +13,44 @@ c= 2
 c **= 3;
 print(c)
 
-mult = '''
-multiline
+mult = """
+multiline 
 test
 string
+"""
+
+print("===")
+print(mult[0])
+print("===")
+print("\n")
+print("===")
+print()
+print("===")
+
+a = "20230331Rainy"
+year = a[0:4]
+month = a[4:6]
+date = a[6:8]
+
+weather = a[8:]
+
+print(year + month + date + weather)
+
+
+'''
+'''
+num = 99
+width = 10
+f_str = f"{num:>{10}}"
+
+print(f_str)
+
+
+
+f_strr = "{2:(>5}{1:<5}{0:<5} ".format("hi", "yes", "yeet")
+
+print(f_strr)
+'''
 '''
 
 
@@ -34,7 +70,7 @@ print(d.split(","))
 #odd.sort()
 #print(odd)
 
-'''
+
 str = "0 똘기 떵이 호치 새초미"
 
 list1 = str.split(" ");
@@ -52,30 +88,4 @@ else:
         list1.insert(len(list1)-1 ,list1.pop(0))
 
 print(list1)
-'''
 
-'''
-data = input('회전수와 문자열을 입력하세요. : ').split()
-rn = int(data.pop(0)) % len(data)
-print(' '.join([
-        (data*2)[len(data) + i - rn]
-            for i in range(len(data))
-                ])
-    )
-
-'''
-
-
-interest = ['삼성','LG','Naver']
-
-interest.pop(1)
-print(interest)
-
-
-interest2 = ['삼성','LG', 'Naver', '하이닉스', '대우']
-
-
-def add(a, b):
-    return a+b
-
-print(add(1, 2))
