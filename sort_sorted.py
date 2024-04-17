@@ -156,6 +156,8 @@ input을 아래와 같이 변경한 경우
     people = [Person(30, "Alice"), Person(25, "Bob"), Person(
         25, "Alice"), Person(25, "hola"), Person(25, "calli")]
 output의 정렬 기준이 변경됨을 확인
+'''
+'''
     25: Alice
     25: Bob
     25: calli
