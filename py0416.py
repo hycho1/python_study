@@ -48,6 +48,7 @@ QUIZ #4
 3.중복을 제거한 이름을 출력하세요.
 4.중복을 제거한 이름을 오름차순으로 정렬하여 출력하세요.
 '''
+
 '''
 name_string = "이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌"
 
@@ -90,14 +91,26 @@ print("3번 답: ", name_set)
 name_list_arrage= list(name_set)
 
 print("4번 답: ", sorted(name_list_arrage))
+name_list_arrage.sort()
+print("4번 답ex: ", name_list_arrage)
 '''
 
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-name_string = "이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌"
-name_list = name_string.split(",")
-name = []
-sung = []
+    def __lt__(self, other):
+        return (self.name, self.age) < (other.name, other.age)
 
-for i in name_list:
-    print(i[0])
+
+people = [Person("Alice", 30), Person("Bob", 25), Person(
+    "Alice", 25), Person("hola", 25), Person("calli", 25)]
+
+# sorted() 함수 사용
+sorted_people = sorted(people)
+
+# 결과 출력
+for person in sorted_people:
+    print(f"{person.name}: {person.age} ")
