@@ -1,0 +1,102 @@
+1차원 형태인 Series
+print(pd.Series) : <class 'pandas.core.series.Series'>
+
+
+딕셔너리( {} key value 중괄호의 형태 )를 pandas 라이브러리를 통해 Series로 변환
+
+    dict_data = {'a': 1, 'b': 2, 'c': 3}
+    sr = pd.Series(dict_data)
+    
+결과)
+a    1
+b    2
+c    3
+dtype: int64
+    
+
+데이터가 혼합된 리스트로도 Series 변환 가능
+
+    list_data = ['2019-01-02', 3.14, 'ABC', 100, True]
+    sr = pd.Series(list_data)
+
+결과)
+0    2019-01-02
+1          3.14
+2           ABC
+3           100
+4          True
+dtype: object
+
+
+1차원 구조는 단일 칼럼인 테이블 형태로 구성(index, values)
+
+    idx = sr.index
+    val = sr.values
+
+결과)
+Index(['이름', '생년월일', '성별', '학생여부'], dtype='object')
+['영인' '2010-05-01' '여' True]
+
+
+튜플 또한 변환가능, 리스트, 딕셔너리, 튜플 등 데이터의 형태가 있는 대상은 모두 변환 가능한 듯
+Series 객체 생성 시 index=['','',...]로 파라미터를 추가하여 columns를 명시적 지정 가능
+1차원 형태에서는 index자리에 지정되며 DB insert문과 동일하게 순서가 중요해보임
+
+    tup_data = ('영인', '2010-05-01', '여', True)
+    sr = pd.Series(tup_data, index=['이름', '생년월일', '성별', '학생여부'])
+
+결과)
+이름              영인
+생년월일    2010-05-01
+성별               여
+학생여부          True
+dtype: object
+    
+
+SQL과 비슷하다는 관점에서 데이터를 다루는 쿼리를 함수화 시켜놨다는 생각이 듦
+특정 원소 선택
+데이터의 순번(인덱스) 또는 인덱스의 지정명(columns)을 알고 있다면 직접 단일 원소 지정가능
+
+    print(sr[0])       # sr의 1 번째 원소를 선택 (정수형 위치 인덱스를 활용)
+    print(sr['이름'])  # '이름' 라벨을 가진 원소를 선택 (인덱스 이름을 활용)
+    
+결과)    
+영인
+영인
+    
+    
+당연히 개별 지정 선택, 다중 선택 모두 가능
+다만, 2건 이상의 선택의 경우 테이블 형태로 표현됨
+
+개별 지정
+
+    print(sr[[1, 2]])
+    print(sr[['생년월일', '성별']])
+
+결과)    
+생년월일    2010-05-01
+성별               여
+dtype: object
+
+생년월일    2010-05-01
+성별               여
+dtype: object    
+    
+
+다중 선택
+
+    print(sr[1 : 2])  
+    print(sr['생년월일' : '성별'])
+
+결과)
+생년월일    2010-05-01
+성별               여
+dtype: object
+
+생년월일    2010-05-01
+성별               여
+dtype: object    
+
+
+
+
