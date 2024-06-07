@@ -1,0 +1,16 @@
+[그리드 서치 적용 실습]
+
+- 타이타닉 생존자 분류 모델 생성
+	테스트 모델(하이퍼 파라미터):
+		로지스틱 회귀(C, penalty, max_iter, solver 등)
+		결정트리분류(max_length, min_samples_split, max_feature 등)
+
+		평가 지표 확인: 혼동 행렬, F1-score, ROC/AUC
+
+- mpg 결정트리로 특성 중요도 파악하여 연비 예측 모델 생성(중요도 높은 특성만 활용)
+
+	테스트 모델(하이퍼 파라미터):
+		릿지, 라쏘(alpha),
+		결정 트리 회귀(max_length, min_samples_split, max_feature 등)
+
+	평가 지표 확인: MAE, MRSE, R^2

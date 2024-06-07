@@ -1,0 +1,18 @@
+[랜덤 포레스트 실습]
+    랜덤 포레스트의 주요 하이퍼 파라미터:
+           n_estimators
+              max_features
+              max_depth
+              min_samples_split
+              min_samples_leaf
+              
+           - titanic 생존자 분류 모델 생성(RandomForestClassfier)
+               분류 평가 지표 확인: 혼동 행렬, F1-score, ROC/AUC
+           - mpg 연비 예측 모델 생성(RandomForestRegressor)
+               회귀 평가 지표 확인: MAE, RMSE, R^2
+               
+           
+           # 이전 학습 모델과 비교
+           # 배깅, 부스팅, 보팅 찾아보기
+           # 다른 모델도 테스트 해보기
+               ExtraTree, GradientBoosting, HistGradientBoosting, XGBoost, LightBGM, VottingClassfier 등
